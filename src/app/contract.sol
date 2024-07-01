@@ -1,17 +1,16 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.8;
-import "hardhat/console.sol";
 
 contract App{
     // fund, withdraw, transfer
     mapping(address=>uint256) public balances;
-    constructor(){
+    constructor(){  
         balances[msg.sender]=msg.sender.balance;
     }
 
     function Fund() public payable{
         require(balances[msg.sender]>=msg.value,"The balance is not enough in sender's account");
-        balances[msg.sender]-=msg.value;
+        balances[msg.sender]+=msg.value;
 
     }
 
