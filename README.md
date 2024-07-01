@@ -1,9 +1,13 @@
 # METACRAFTERES PROJECT-2
 
+# To run the Project
+```
+npm run dev
+```
 ## SETUP
 to install dependencies
 ```shell
-yarn
+npm
 ```
 ## Functions of the project
 ### Connect wallet
